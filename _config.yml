@@ -1,0 +1,18 @@
+title: yeno.studio
+description: Practical notes on digital products, useful experiences, campaigns, and sustainable growth.
+url: https://yeno.studio
+baseurl: ""
+permalink: /blog/:title/
+timezone: Asia/Jakarta
+future: false
+markdown: kramdown
+plugins:
+  - jekyll-feed
+feed:
+  path: feed.xml
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
