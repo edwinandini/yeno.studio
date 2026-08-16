@@ -1,18 +1,20 @@
 ---
 layout: post
 title: Sudah Pasang Iklan tapi Tidak Ada Penjualan? Cek 10 Penyebab Ini
+slug: sudah-pasang-iklan-tapi-tidak-ada-penjualan-cek-10-penyebab-ini
 description: Iklan sudah berjalan tapi belum menghasilkan penjualan? Pelajari 10
   penyebabnya, dari targeting, penawaran, landing page, hingga tracking.
+seo_title: Sudah Pasang Iklan tapi Tidak Ada Penjualan? Cek 10 Penyebab Ini
 date: 2026-08-16
 author: yeno.studio
 published: true
-category: Campaigns & growth
+category: Practice
 tags:
   - performance marketing
   - growth marketing
   - google ads
   - meta ads
-noindex: true
+noindex: false
 ---
 Kamu sudah mengeluarkan budget untuk Google Ads, Meta Ads, atau TikTok Ads. Iklan mendapatkan impresi, bahkan mungkin cukup banyak klik, tetapi penjualan tetap tidak bergerak.
 

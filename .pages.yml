@@ -4,29 +4,32 @@ media:
 
 content:
   - name: posts
-    label: Blog posts
+    label: Journal notes
     type: collection
     path: _posts
     filename: "{year}-{month}-{day}-{title}.md"
     view:
       primary: title
-      fields: [published, cover, title, date, author]
+      fields: [published, cover, title, slug, date, author]
       sort: [date, title]
       default:
         sort: date
         order: desc
     fields:
       - { name: layout, type: string, hidden: true, default: post }
-      - { name: title, label: Article title, type: string, required: true }
-      - { name: description, label: Meta description, type: text, required: true, description: "A clear 120–160 character summary for Google and social previews." }
-      - { name: seo_title, label: SEO title, type: string, description: "Optional. Leave blank to use the article title." }
+      - { name: title, label: Article title, type: string, required: true, description: "Used as the visible headline and the initial URL." }
+      - { name: slug, label: URL slug, type: string, description: "Optional. Edit this after publishing to change the URL. Use lowercase words separated by hyphens. The previous URL will show the Journal 404 page." }
+      - { name: description, label: Meta description, type: text, required: true, description: "A clear 120–160 character summary for Google, social previews, and the Journal card." }
+      - { name: seo_title, label: SEO title, type: string, description: "Optional. Aim for roughly 50–60 characters. Leave blank to use the article title." }
       - { name: date, label: Publish date, type: date, options: { time: false }, required: true }
-      - { name: author, label: Author, type: string, required: true, default: "yeno.studio" }
-      - { name: published, label: Published, type: boolean, default: false, description: "Keep off while drafting. Turn on when the article is ready to go live." }
-      - { name: category, label: Category, type: select, options: { values: [ "Product thinking", "Design & experience", "Development", "Campaigns & growth", "Studio notes" ] } }
-      - { name: tags, label: Tags, type: string, list: true }
+      - { name: updated, label: Updated date, type: date, options: { time: false }, description: "Optional. Use when the article has been materially revised." }
+      - { name: author, label: Author name, type: string, required: true, default: "yeno.studio" }
+      - { name: author_role, label: Author role, type: string, description: "Optional role shown beside the byline, for example Strategy & design." }
+      - { name: published, label: Published, type: boolean, default: false, description: "Keep off while drafting. Turn on only when the note is ready to appear publicly." }
+      - { name: category, label: Category, type: select, options: { values: [ "Field Notes", "Practice", "Perspectives", "Studio" ] } }
+      - { name: tags, label: Tags, type: string, list: true, description: "Use subjects such as product strategy, design, engineering, or paid media." }
       - { name: cover, label: Cover image, type: image }
-      - { name: cover_alt, label: Cover image description, type: string, description: "Describe the image for accessibility and image search." }
+      - { name: cover_alt, label: Cover image description, type: string, description: "Describe what is visibly shown in the image." }
       - { name: canonical_url, label: Canonical URL, type: string, description: "Usually blank. Use only if this article was first published elsewhere." }
-      - { name: noindex, label: Hide from search engines, type: boolean, default: false }
+      - { name: noindex, label: Hide from search engines, type: boolean, default: false, description: "Use for tests or private utility notes. Hidden notes will not appear in the Journal or sitemap." }
       - { name: body, label: Article, type: rich-text, required: true }

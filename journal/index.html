@@ -1,0 +1,22 @@
+---
+layout: default
+seo_title: The Yeno Journal · Notes on useful digital work
+title: The Yeno Journal
+description: Observations from product strategy, design, engineering, campaigns, and the choices that shape what happens after launch.
+page_class: journal
+permalink: /journal/
+---
+<section class="journal-hero wrap"><p class="label">The Yeno Journal</p><h1>Notes on making<br><em>useful digital work.</em></h1><p>Observations from product strategy, design, engineering, campaigns, and the choices that shape what happens after launch.</p></section>
+<section class="post-grid wrap">
+  {% assign public_posts = site.posts | where_exp: "post", "post.noindex != true" %}
+  {% for post in public_posts %}
+  {% assign words = post.content | number_of_words %}{% assign reading_time = words | divided_by: 200 | plus: 1 %}
+  <article class="post-card"><a href="{{ post.url | relative_url }}" aria-label="Continue reading: {{ post.title | escape }}">
+    {% if post.cover %}<div class="post-cover-card"><img src="{{ post.cover }}" alt="{{ post.cover_alt | default: post.title | escape }}"></div>{% endif %}
+    <div class="card-meta"><span>{{ post.category | default: 'Note' }}</span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d %b %Y' }}</time><span>{{ reading_time }} min read</span></div>
+    <h2>{{ post.title }}</h2><p>{{ post.description | strip_newlines }}</p><p class="card-author">By {{ post.author | default: 'yeno.studio' }}</p><span class="continue">Continue reading</span>
+  </a></article>
+  {% else %}
+  <div class="journal-empty"><p class="label">In preparation</p><article><h2>The first notes are in preparation.</h2><p>A considered collection on products, audiences, and the practice of making both matter.</p></article></div>
+  {% endfor %}
+</section>

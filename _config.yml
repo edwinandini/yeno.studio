@@ -1,8 +1,8 @@
 title: yeno.studio
-description: Practical notes on digital products, useful experiences, campaigns, and sustainable growth.
+description: We shape useful digital products, then help them earn a place in people's lives.
 url: https://yeno.studio
 baseurl: ""
-permalink: /blog/:title/
+permalink: /journal/:slug/
 timezone: Asia/Jakarta
 future: false
 markdown: kramdown

@@ -1,44 +1,31 @@
-<!doctype html>
-<html lang="en">
-<head>
-  {% assign meta_title = page.seo_title | default: page.title %}
-  {% assign canonical = page.canonical_url | default: page.url | absolute_url %}
-  {% assign published_at = page.date | date_to_xmlschema %}
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NF837NTV');</script>
-  <!-- End Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZY8HDJ54XC"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-ZY8HDJ54XC');</script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>{{ meta_title | escape }} | yeno.studio</title>
-  <meta name="description" content="{{ page.description | escape }}">
-  <meta name="robots" content="{% if page.noindex %}noindex,nofollow,noarchive{% else %}index,follow{% endif %}">
-  <meta name="theme-color" content="#f5f0e7">
-  <link rel="canonical" href="{{ canonical }}">
-  <meta property="og:title" content="{{ meta_title | escape }}">
-  <meta property="og:description" content="{{ page.description | escape }}">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="{{ canonical }}">
-  <meta property="og:site_name" content="yeno.studio">
-  {% if page.cover %}<meta property="og:image" content="{{ page.cover | absolute_url }}">{% endif %}
-  <meta property="article:published_time" content="{{ published_at }}">
-  <meta name="twitter:card" content="{% if page.cover %}summary_large_image{% else %}summary{% endif %}">
-  <meta name="twitter:title" content="{{ meta_title | escape }}">
-  <meta name="twitter:description" content="{{ page.description | escape }}">
-  {% if page.cover %}<meta name="twitter:image" content="{{ page.cover | absolute_url }}">{% endif %}
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"datePublished":{{ published_at | jsonify }},"dateModified":{{ published_at | jsonify }},"author":{"@type":"Organization","name":{{ page.author | default: 'yeno.studio' | jsonify }}},"publisher":{"@type":"Organization","name":"yeno.studio","url":"https://yeno.studio"},"mainEntityOfPage":{{ canonical | jsonify }}{% if page.cover %},"image":{{ page.cover | absolute_url | jsonify }}{% endif %}}</script>
-  <style>
-    :root{--ink:#15110e;--paper:#f5f0e7;--orange:#ff5a1f;--line:rgba(21,17,14,.23)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit}.wrap{width:min(1400px,calc(100% - 64px));margin-inline:auto}.nav{height:94px;display:grid;grid-template-columns:1fr auto;align-items:center;border-bottom:1px solid var(--line);font-size:13px;font-weight:700}.nav a{text-decoration:none}.logo{font-size:21px;font-weight:900;letter-spacing:-.075em}.logo span{color:var(--orange)}.navlinks{display:flex;gap:36px;justify-self:end}.navlinks a:hover,.navlinks a[aria-current]{color:var(--orange)}.articleHead{padding:84px 0 62px;max-width:1120px}.eyebrow{display:flex;justify-content:space-between;gap:20px;font:700 10px monospace;text-transform:uppercase;letter-spacing:.12em}.articleHead h1{font-size:clamp(58px,8vw,118px);line-height:.86;letter-spacing:-.075em;margin:38px 0}.dek{font-size:clamp(19px,2vw,26px);line-height:1.45;max-width:780px;margin-left:auto}.cover{width:min(1400px,calc(100% - 64px));margin:0 auto 80px;max-height:780px;object-fit:cover;display:block}.article{width:min(760px,calc(100% - 36px));margin:0 auto;padding-bottom:110px;font-family:Georgia,serif;font-size:19px;line-height:1.75}.article h2,.article h3{font-family:Arial,Helvetica,sans-serif;line-height:1.05;letter-spacing:-.04em}.article h2{font-size:42px;margin:62px 0 20px}.article h3{font-size:28px;margin-top:44px}.article p{margin:0 0 26px}.article img{max-width:100%;height:auto}.article blockquote{margin:44px 0;border-left:4px solid var(--orange);padding:4px 0 4px 28px;font-size:26px;line-height:1.45}.article a{color:#b7380b;text-underline-offset:4px}.article ul,.article ol{padding-left:26px}.postCta{border-top:1px solid var(--line);padding-top:42px;margin-top:70px}.postCta h2{font-size:32px;margin:0 0 16px}.postCta a{font-family:Arial,Helvetica,sans-serif;font-weight:700}.footer{min-height:100px;padding:24px 0;display:grid;grid-template-columns:1fr 2fr auto;gap:30px;align-items:center;font:11px Arial,Helvetica,sans-serif;border-top:1px solid var(--line)}.footer a{text-decoration:none}.footer p{margin:0}@media(max-width:780px){.wrap,.cover{width:calc(100% - 36px)}.nav{height:76px}.navlinks{gap:16px;font-size:11px}.articleHead{padding:58px 0 46px}.articleHead h1{font-size:16vw;margin:28px 0}.dek{font-size:18px}.cover{margin-bottom:54px}.article{font-size:18px;padding-bottom:82px}.article h2{font-size:34px}.footer{grid-template-columns:1fr auto}.footer p{display:none}}@media(max-width:420px){.navlinks{gap:11px;font-size:10px}}
-  </style>
-</head>
-<body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NF837NTV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <nav class="nav wrap" aria-label="Main navigation"><a class="logo" href="/" aria-label="yeno.studio home">yeno<span>.</span>studio</a><div class="navlinks"><a href="/">Home</a><a href="/about/">About</a><a href="/blog/" aria-current="page">Blog</a></div></nav>
-  <header class="articleHead wrap"><div class="eyebrow"><span>{{ page.category | default: 'Journal' }}</span><time datetime="{{ published_at }}">{{ page.date | date: '%d %B %Y' }}</time></div><h1>{{ page.title }}</h1><p class="dek">{{ page.description }}</p></header>
-  {% if page.cover %}<img class="cover" src="{{ page.cover }}" alt="{{ page.cover_alt | default: page.title | escape }}">{% endif %}
-  <article class="article">{{ content }}<aside class="postCta"><h2>Have something worth moving?</h2><p><a href="mailto:hello@yeno.studio">Start a conversation with yeno.studio ↗</a></p></aside></article>
-  <footer class="footer wrap"><a class="logo" href="/">yeno<span>.</span>studio</a><p>Digital experiences built to earn attention.</p><span>© 2026</span></footer>
-</body>
-</html>
-
+---
+layout: default
+---
+{% assign published_at = page.date | date_to_xmlschema %}
+{% assign words = content | number_of_words %}
+{% assign reading_time = words | divided_by: 200 | plus: 1 %}
+<article class="post-shell">
+  <header class="post-head wrap">
+    <a class="back-link" href="/journal/">← All notes</a>
+    <div class="post-meta">
+      <span>{{ page.category | default: 'Note' }}</span>
+      <time datetime="{{ published_at }}">{{ page.date | date: '%d %B %Y' }}</time>
+      <span>{{ reading_time }} min read</span>
+    </div>
+    <h1>{{ page.title }}</h1>
+    <p class="post-dek">{{ page.description | strip_newlines }}</p>
+    <p class="post-byline">Words by <strong>{{ page.author | default: 'yeno.studio' }}</strong>{% if page.author_role %} · {{ page.author_role }}{% endif %}</p>
+    {% if page.updated %}<p class="post-updated">Updated <time datetime="{{ page.updated | date_to_xmlschema }}">{{ page.updated | date: '%d %B %Y' }}</time></p>{% endif %}
+  </header>
+  {% if page.cover %}<figure class="post-cover wrap"><img src="{{ page.cover }}" alt="{{ page.cover_alt | default: page.title | escape }}"></figure>{% endif %}
+  <div class="article-body">{{ content }}</div>
+  {% assign public_posts = site.posts | where_exp: "post", "post.noindex != true" %}
+  {% assign related_note = nil %}
+  {% for note in public_posts %}{% if note.url != page.url and related_note == nil %}{% assign related_note = note %}{% endif %}{% endfor %}
+  <aside class="post-end wrap">
+    <div class="post-continuation">
+      {% if related_note %}<p class="label">Further reading</p><a href="{{ related_note.url | relative_url }}"><strong>{{ related_note.title }}</strong><span>Continue reading →</span></a>{% else %}<p class="label">Keep exploring</p><a href="/journal/"><strong>More notes from The Yeno Journal</strong><span>All notes →</span></a>{% endif %}
+    </div>
+    <div class="post-cta"><p class="label">Working through a similar question?</p><h2>Start a conversation.</h2><a href="mailto:hello@yeno.studio?subject=Journal%20enquiry">hello@yeno.studio →</a></div>
+  </aside>
+</article>
