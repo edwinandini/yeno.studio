@@ -32,7 +32,7 @@ layout: default
       var list = document.getElementById('article-toc-list');
       if (!article || !directory || !list) return;
 
-      var headings = Array.prototype.slice.call(article.querySelectorAll('h2, h3'));
+      var headings = Array.prototype.slice.call(article.querySelectorAll('h2'));
       if (!headings.length) {
         directory.hidden = true;
         return;
