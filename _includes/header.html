@@ -1,11 +1,31 @@
 <header class="site-header">
   <div class="site-header__inner wrap">
     <a class="logo" href="/" aria-label="yeno.studio home">yeno<span>.</span>studio</a>
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="/"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
-      <a href="/studio/"{% if page.url contains '/studio/' %} aria-current="page"{% endif %}>Studio</a>
-      <a href="/journal/"{% if page.url contains '/journal/' or page.layout == 'post' %} aria-current="page"{% endif %}>Journal</a>
-      <a class="nav-cta" href="mailto:hello@yeno.studio?subject=Project%20enquiry">Start a project</a>
-    </nav>
+    <details class="nav-menu" open>
+      <summary><span>Menu</span><i aria-hidden="true"></i></summary>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+        <a href="/studio/"{% if page.url contains '/studio/' %} aria-current="page"{% endif %}>Studio</a>
+        <a href="/journal/"{% if page.url contains '/journal/' or page.layout == 'post' %} aria-current="page"{% endif %}>Journal</a>
+        <a class="nav-cta" href="mailto:hello@yeno.studio?subject=Project%20enquiry">Start a project</a>
+      </nav>
+    </details>
   </div>
 </header>
+<script>
+  (function () {
+    var menu = document.querySelector('.nav-menu');
+    if (!menu) return;
+    var mobile = window.matchMedia('(max-width: 720px)');
+    var syncMenu = function () {
+      if (mobile.matches) menu.removeAttribute('open');
+      else menu.setAttribute('open', '');
+    };
+    syncMenu();
+    if (mobile.addEventListener) mobile.addEventListener('change', syncMenu);
+    else mobile.addListener(syncMenu);
+    menu.addEventListener('click', function (event) {
+      if (mobile.matches && event.target.closest('.nav-links a')) menu.removeAttribute('open');
+    });
+  }());
+</script>
