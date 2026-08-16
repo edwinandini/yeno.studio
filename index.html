@@ -60,7 +60,7 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <main id="top">
-  <nav class="nav wrap" aria-label="Main navigation"><a class="logo" href="#top" aria-label="yeno.studio home">yeno<span>.</span>studio</a><div class="navlinks"><a href="#work">Work</a><a href="#services">Services</a><a href="#approach">Approach</a></div><a class="navcta" href="mailto:hello@yeno.studio">Start a project <span>↗</span></a></nav>
+  <nav class="nav wrap" aria-label="Main navigation"><a class="logo" href="#top" aria-label="yeno.studio home">yeno<span>.</span>studio</a><div class="navlinks"><a href="#work">Work</a><a href="#services">Services</a><a href="#approach">Approach</a><a href="/about/">About</a></div><a class="navcta" href="mailto:hello@yeno.studio">Start a project <span>↗</span></a></nav>
   <section class="hero wrap" aria-labelledby="hero-title"><div class="kicker"><span>Independent digital studio</span><span>Strategy · design · engineering · growth</span></div><div class="heroBody"><h1 id="hero-title">Ideas with <em>direction.</em><br>Digital work with <i>traction.</i></h1><div class="signal" aria-hidden="true"><span></span><span></span><span></span><b></b></div></div><div class="heroBottom"><p>We turn promising ideas into useful digital experiences—and help them find the audience they deserve.</p><a href="#services" aria-label="Explore our services">↓</a></div></section>
   <section class="intro wrap" id="approach"><p class="label">From signal to momentum</p><div><h2>Make it useful.<br><em>Make it matter.</em></h2><p>We work across strategy, design, technology, and audience growth. That wider view helps us make smarter decisions early, build with purpose, and keep improving after launch.</p></div></section>
   <section class="services" id="services"><div class="wrap"><p class="label light">What we do</p><article class="service"><span class="serviceId">01</span><div><span class="pill">Digital Products</span><h3>Shape an idea into something people want to use.</h3></div><div><p>We clarify the opportunity, design the experience, and build polished websites, platforms, and apps that are ready for the real world.</p><ul><li>Product strategy <span>↗</span></li><li>UX &amp; UI design <span>↗</span></li><li>Web &amp; app development <span>↗</span></li></ul></div></article><article class="service"><span class="serviceId">02</span><div><span class="pill">Growth &amp; Campaigns</span><h3>Give good work the attention it deserves.</h3></div><div><p>We create campaigns, content, and measurement systems that reach the right people, sharpen the message, and turn interest into momentum.</p><ul><li>Digital campaigns <span>↗</span></li><li>Creative &amp; content <span>↗</span></li><li>Analytics &amp; conversion <span>↗</span></li></ul></div></article></div></section>
@@ -69,5 +69,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="cta wrap"><p class="label">Have something worth building?</p><a href="mailto:hello@yeno.studio"><span>Let’s make it</span><br><em>move.</em><b>↗</b></a></section>
   <footer class="footer wrap"><a class="logo" href="#top">yeno<span>.</span>studio</a><p>Digital experiences built to earn attention.</p><span>© 2026</span></footer>
 </main>
+<script>
+document.addEventListener('click', function(event) {
+  var target = event.target;
+  var link = target && target.closest ? target.closest('a[href^="mailto:hello@yeno.studio"]') : null;
+  if (!link || typeof window.gtag !== 'function') return;
+  window.gtag('event', 'generate_lead', { method: 'email', link_url: link.href });
+});
+</script>
 </body>
 </html>
