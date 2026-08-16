@@ -19,8 +19,8 @@ content:
       - { name: layout, type: string, hidden: true, default: post }
       - { name: title, label: Article title, type: string, required: true, description: "Used as the visible headline and the initial URL." }
       - { name: slug, label: URL slug, type: string, description: "Optional. Edit this after publishing to change the URL. Use lowercase words separated by hyphens. The previous URL will show the Journal 404 page." }
-      - { name: description, label: Meta description, type: text, required: true, description: "A clear 120–160 character summary for Google, social previews, and the Journal card." }
-      - { name: seo_title, label: SEO title, type: string, description: "Optional. Aim for roughly 50–60 characters. Leave blank to use the article title." }
+      - { name: description, label: Meta description, type: text, required: true, description: "A clear 120 to 160 character summary for Google, social previews, and the Journal card." }
+      - { name: seo_title, label: SEO title, type: string, description: "Optional. Aim for roughly 50 to 60 characters. Leave blank to use the article title." }
       - { name: date, label: Publish date, type: date, options: { time: false }, required: true }
       - { name: updated, label: Updated date, type: date, options: { time: false }, description: "Optional. Use when the article has been materially revised." }
       - { name: author, label: Author name, type: string, required: true, default: "yeno.studio" }
