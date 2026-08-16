@@ -330,4 +330,4 @@ Masalahnya dapat berasal dari objective campaign, targeting, creative, penawaran
 
 Pendekatan terbaik adalah melihat paid ads sebagai bagian dari sistem yang lebih besar, bukan saluran yang bekerja sendirian.
 
-Yeno membantu bisnis mengevaluasi keseluruhan funnel, mulai dari strategi paid ads dan akurasi tracking hingga landing page, UX, dan proses konversi. Kalau campaign-mu mendapatkan traffic tetapi belum menghasilkan penjualan, diskusikan bersama Yeno untuk menemukan titik masalah dan menentukan prioritas perbaikannya.
+[Yeno Studio](https://yeno.studio/) membantu bisnis mengevaluasi keseluruhan funnel, mulai dari strategi paid ads dan akurasi tracking hingga landing page, UX, dan proses konversi. Kalau campaign-mu mendapatkan traffic tetapi belum menghasilkan penjualan, diskusikan bersama Yeno Studio untuk menemukan titik masalah dan menentukan prioritas perbaikannya.
