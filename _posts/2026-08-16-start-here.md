@@ -1,20 +1,16 @@
 ---
 layout: post
 title: "Start here: your first yeno.studio article"
-description: "A private starter draft showing the fields and structure available in the yeno.studio blog editor."
-seo_title: ""
-date: 2026-08-16 09:00:00 +0700
-author: "yeno.studio"
-published: false
-category: "Studio notes"
+description: A private starter draft showing the fields and structure available
+  in the yeno.studio blog editor.
+date: 2026-08-16T19:23
+author: yeno.studio
+published: true
+category: Studio notes
 tags:
   - starter
-cover: ""
-cover_alt: ""
-canonical_url: ""
 noindex: true
 ---
-
 This is a private starter draft. It will not appear on the website or in search results.
 
 Use it to explore the editor, or replace it with your first article. A useful article normally includes:
