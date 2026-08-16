@@ -9,6 +9,9 @@ published: true
 category: Campaigns & growth
 tags:
   - performance marketing
+  - growth marketing
+  - google ads
+  - meta ads
 noindex: true
 ---
 Kamu sudah mengeluarkan budget untuk Google Ads, Meta Ads, atau TikTok Ads. Iklan mendapatkan impresi, bahkan mungkin cukup banyak klik, tetapi penjualan tetap tidak bergerak.
