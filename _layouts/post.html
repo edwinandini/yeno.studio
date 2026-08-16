@@ -18,7 +18,79 @@ layout: default
     {% if page.updated %}<p class="post-updated">Updated <time datetime="{{ page.updated | date_to_xmlschema }}">{{ page.updated | date: '%d %B %Y' }}</time></p>{% endif %}
   </header>
   {% if page.cover %}<figure class="post-cover wrap"><img src="{{ page.cover }}" alt="{{ page.cover_alt | default: page.title | escape }}"></figure>{% endif %}
-  <div class="article-body">{{ content }}</div>
+  <div class="post-content-grid">
+    <details class="article-toc" open>
+      <summary>In this note</summary>
+      <nav id="article-toc-list" aria-label="Article sections"></nav>
+    </details>
+    <div class="article-body" id="article-content">{{ content }}</div>
+  </div>
+  <script>
+    (function () {
+      var article = document.getElementById('article-content');
+      var directory = document.querySelector('.article-toc');
+      var list = document.getElementById('article-toc-list');
+      if (!article || !directory || !list) return;
+
+      var headings = Array.prototype.slice.call(article.querySelectorAll('h2, h3'));
+      if (!headings.length) {
+        directory.hidden = true;
+        return;
+      }
+
+      var usedIds = {};
+      var links = {};
+      var slugify = function (text) {
+        return text.normalize('NFKD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .toLowerCase()
+          .trim()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-+|-+$/g, '') || 'section';
+      };
+
+      headings.forEach(function (heading) {
+        var baseId = heading.id || slugify(heading.textContent);
+        var count = usedIds[baseId] || 0;
+        usedIds[baseId] = count + 1;
+        var id = count ? baseId + '-' + (count + 1) : baseId;
+        heading.id = id;
+
+        var link = document.createElement('a');
+        link.href = '#' + id;
+        link.className = 'toc-link toc-level-' + heading.tagName.slice(1);
+        link.textContent = heading.textContent;
+        list.appendChild(link);
+        links[id] = link;
+      });
+
+      var setActive = function (id) {
+        Object.keys(links).forEach(function (key) {
+          if (key === id) links[key].setAttribute('aria-current', 'location');
+          else links[key].removeAttribute('aria-current');
+        });
+      };
+
+      var initialId = window.location.hash.slice(1);
+      setActive(links[initialId] ? initialId : headings[0].id);
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) setActive(entry.target.id);
+          });
+        }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+        headings.forEach(function (heading) { observer.observe(heading); });
+      }
+
+      var mobile = window.matchMedia('(max-width: 900px)');
+      if (mobile.matches) directory.removeAttribute('open');
+      list.addEventListener('click', function (event) {
+        var link = event.target.closest('a');
+        if (link && mobile.matches) directory.removeAttribute('open');
+      });
+    }());
+  </script>
   {% assign public_posts = site.posts | where_exp: "post", "post.noindex != true" %}
   {% assign related_note = nil %}
   {% for note in public_posts %}{% if note.url != page.url and related_note == nil %}{% assign related_note = note %}{% endif %}{% endfor %}
