@@ -32,7 +32,7 @@
   {% elsif page.url == '/' %}
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"yeno.studio","url":"https://yeno.studio","email":"hello@yeno.studio","description":{{ meta_description | jsonify }},"areaServed":"Worldwide","serviceType":["Digital product strategy","Digital product design and development","Audience strategy","Digital campaigns"]}</script>
   {% endif %}
-  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body class="page-{{ page.page_class | default: page.layout | default: 'default' }}">
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NF837NTV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
