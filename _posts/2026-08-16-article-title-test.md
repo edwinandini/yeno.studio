@@ -3,7 +3,7 @@ layout: post
 title: article title test
 description: meta desc test article
 seo_title: seo title
-date: 2026-08-16T19:16
+date: 2026-08-16
 author: yeno.studio
 published: true
 category: Product thinking

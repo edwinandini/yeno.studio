@@ -3,7 +3,7 @@ layout: post
 title: second exampleee
 description: second meta description
 seo_title: second seo title
-date: 2026-08-16T19:25
+date: 2026-08-16
 author: yeno.studio
 published: true
 noindex: true

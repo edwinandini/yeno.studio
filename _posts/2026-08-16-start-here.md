@@ -3,7 +3,7 @@ layout: post
 title: "Start here: your first yeno.studio article"
 description: A private starter draft showing the fields and structure available
   in the yeno.studio blog editor.
-date: 2026-08-16T19:23
+date: 2026-08-16
 author: yeno.studio
 published: true
 category: Studio notes
