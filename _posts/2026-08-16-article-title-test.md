@@ -38,6 +38,8 @@ Gunakan indikator sederhana ini untuk mempersempit diagnosis:
 | Dashboard mencatat konversi tetapi omzet tidak bertambah | Conversion tracking atau definisi konversi |
 
 
+
+
 Setelah mengetahui bagian funnel yang bermasalah, kamu dapat melakukan perbaikan dengan lebih terarah.
 
 ## 1. Tujuan campaign tidak sesuai dengan hasil bisnis
