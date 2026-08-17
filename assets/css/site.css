@@ -36,7 +36,7 @@ p{margin-top:0}
 
 /* Studio */
 .studio-hero{padding:90px 0 120px}.studio-hero .label{margin:0 0 32px}.studio-hero h1{font-size:clamp(68px,9vw,140px);line-height:.82;letter-spacing:-.08em;margin:0;max-width:1240px}.studio-hero>p:last-child{font-size:20px;line-height:1.55;max-width:720px;margin:58px 0 0 auto}
-.studio-story{border-top:1px solid var(--line);padding:112px 0;display:grid;grid-template-columns:1fr 2.3fr;gap:60px}.studio-story h2{font-size:clamp(48px,6vw,88px);line-height:.92;letter-spacing:-.06em;margin:0}.studio-story-copy{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:46px}.studio-story-copy p{font-size:17px;line-height:1.65;margin:0}
+.studio-story{border-top:1px solid var(--line);padding:112px 0;display:grid;grid-template-columns:1fr 2.3fr;gap:60px;scroll-margin-top:110px}.studio-story h2{font-size:clamp(48px,6vw,88px);line-height:.92;letter-spacing:-.06em;margin:0}.studio-story-copy{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:46px}.studio-story-copy p{font-size:17px;line-height:1.65;margin:0}
 .studio-principles{background:var(--ink);color:#fff;padding:108px 0}.principles-head{display:grid;grid-template-columns:1fr 2fr;gap:60px;margin-bottom:60px}.principles-head h2{font-size:clamp(48px,6vw,88px);line-height:.92;letter-spacing:-.06em;margin:0}.principles-head p{color:#d2cbc5;font-size:17px;line-height:1.6;max-width:680px}.principle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.principle{border:1px solid #4a443f;padding:28px;min-height:240px}.principle span{font:700 10px monospace;color:#ff7c4b}.principle h3{font-size:26px;margin:52px 0 16px}.principle p{color:#c8c0ba;line-height:1.55;margin:0}
 
 /* Journal index */

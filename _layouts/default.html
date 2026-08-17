@@ -36,7 +36,7 @@
   {% if page.layout == 'post' %}
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":{{ page.title | jsonify }},"description":{{ meta_description | jsonify }},"datePublished":"{{ page.date | date_to_xmlschema }}","dateModified":"{{ page.updated | default: page.date | date_to_xmlschema }}","author":{"@type":"Person","name":{{ page.author | default: 'yeno.studio' | jsonify }}},"mainEntityOfPage":{{ canonical_url | jsonify }}}</script>
   {% elsif page.url == '/' %}
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"yeno.studio","url":"https://yeno.studio","email":"hello@yeno.studio","description":{{ meta_description | jsonify }},"areaServed":"Worldwide","serviceType":["Digital product strategy","Digital product design and development","Audience strategy","Digital campaigns"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"yeno.studio","url":"https://yeno.studio","email":"hello@yeno.studio","description":{{ meta_description | jsonify }},"areaServed":"Worldwide","serviceType":["Product strategy","UX and UI design","Website and application development","Digital marketing","Paid media","SEO and conversion"]}</script>
   {% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
