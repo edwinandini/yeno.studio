@@ -5,7 +5,6 @@
       <summary><span>Explore</span><i class="nav-toggle-mark" aria-hidden="true"></i></summary>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="/"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
-        <a href="/#about">About</a>
         <a href="/journal/"{% if page.url contains '/journal/' or page.layout == 'post' %} aria-current="page"{% endif %}>Journal</a>
         <a class="nav-cta" href="mailto:hello@yeno.studio?subject=Project%20enquiry"><span>Start a project</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </nav>
