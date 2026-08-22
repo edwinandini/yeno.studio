@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: id
 title: Berapa Biaya Membuat Aplikasi? Pahami Faktor Penentunya
 slug: biaya-membuat-aplikasi-dan-faktor-penentunya
 description: Biaya membuat aplikasi ditentukan oleh fitur, platform, integrasi, desain, keamanan, dan kebutuhan operasional. Pelajari cara menyusun estimasi yang tepat.

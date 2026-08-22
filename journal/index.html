@@ -8,7 +8,7 @@ permalink: /journal/
 ---
 <section class="journal-hero wrap"><p class="label">The Yeno Journal</p><h1>Notes on making<br><em>useful digital work.</em></h1><p>Observations from product strategy, design, engineering, campaigns, and the choices that shape what happens after launch.</p></section>
 <section class="post-grid wrap">
-  {% assign public_posts = site.posts | where_exp: "post", "post.noindex != true" %}
+  {% assign public_posts = site.posts | where_exp: "post", "post.noindex != true" | where_exp: "post", "post.published != false" %}
   {% for post in public_posts %}
   {% assign words = post.content | number_of_words %}{% assign reading_time = words | divided_by: 200 | plus: 1 %}
   <article class="post-card"><a href="{{ post.url | relative_url }}" aria-label="Continue reading: {{ post.title | escape }}">
