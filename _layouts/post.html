@@ -91,7 +91,7 @@ layout: default
       });
     }());
   </script>
-  {% assign public_posts = site.posts | where_exp: "post", "post.noindex != true" %}
+  {% assign public_posts = site.posts | where_exp: "post", "post.noindex != true" | where_exp: "post", "post.published != false" %}
   {% assign related_note = nil %}
   {% for note in public_posts %}{% if note.url != page.url and related_note == nil %}{% assign related_note = note %}{% endif %}{% endfor %}
   <aside class="post-end wrap">

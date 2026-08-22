@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: id
 title: Sudah Pasang Iklan tapi Tidak Ada Penjualan? Cek 10 Penyebab Ini
 slug: sudah-pasang-iklan-tapi-tidak-ada-penjualan-cek-10-penyebab-ini
 description: Iklan sudah berjalan tapi belum menghasilkan penjualan? Pelajari 10

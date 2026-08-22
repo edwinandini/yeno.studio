@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: id
 title: Mengapa Bisnis Membutuhkan Website Company Profile yang Terpercaya
 slug: mengapa-bisnis-membutuhkan-website-company-profile-yang-terpercaya
 description: Website company profile yang terpercaya membantu calon pelanggan memverifikasi bisnis, memahami layanan, dan mengambil keputusan dengan lebih yakin.

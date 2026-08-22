@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Check out site
         uses: actions/checkout@v4
+      - name: Validate Journal posts
+        run: python3 scripts/validate_posts.py
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
@@ -39,4 +41,3 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
-

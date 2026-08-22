@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: id
 title: Cara Membuat MVP Produk Digital yang Tepat untuk Menguji Ide
 slug: cara-membuat-mvp-produk-digital-yang-tepat
 description: Pelajari cara membuat MVP produk digital untuk menguji masalah, fitur utama, dan minat pengguna sebelum menghabiskan terlalu banyak waktu dan biaya.

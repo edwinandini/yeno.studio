@@ -1,13 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NF837NTV');</script>
-  <!-- End Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZY8HDJ54XC"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-ZY8HDJ54XC');</script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js',new Date());
+    gtag('config','G-ZY8HDJ54XC',{
+      send_page_view:true,
+      page_location:window.location.href,
+      page_referrer:document.referrer||undefined
+    });
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   {% assign meta_title = page.seo_title | default: page.title | default: site.title %}
   {% assign meta_description = page.description | default: site.description | strip_html | strip_newlines | escape %}
   {% assign canonical_url = page.canonical_url | default: page.url | absolute_url %}
@@ -28,20 +35,20 @@
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:site_name" content="yeno.studio">
+  <meta property="og:locale" content="{% if page.lang == 'id' %}id_ID{% else %}en_US{% endif %}">
   {% if page.cover %}<meta property="og:image" content="{{ page.cover | absolute_url }}">{% elsif page.layout != 'post' %}<meta property="og:image" content="{{ '/og.jpg' | absolute_url }}">{% endif %}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ meta_title }}">
   <meta name="twitter:description" content="{{ meta_description }}">
   {% if page.cover %}<meta name="twitter:image" content="{{ page.cover | absolute_url }}">{% elsif page.layout != 'post' %}<meta name="twitter:image" content="{{ '/og.jpg' | absolute_url }}">{% endif %}
   {% if page.layout == 'post' %}
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":{{ page.title | jsonify }},"description":{{ meta_description | jsonify }},"datePublished":"{{ page.date | date_to_xmlschema }}","dateModified":"{{ page.updated | default: page.date | date_to_xmlschema }}","author":{"@type":"Person","name":{{ page.author | default: 'yeno.studio' | jsonify }}},"mainEntityOfPage":{{ canonical_url | jsonify }}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":{{ page.title | jsonify }},"description":{{ meta_description | jsonify }},"inLanguage":{{ page.lang | default: 'en' | jsonify }},"datePublished":"{{ page.date | date_to_xmlschema }}","dateModified":"{{ page.updated | default: page.date | date_to_xmlschema }}","author":{"@type":"Person","name":{{ page.author | default: 'yeno.studio' | jsonify }}},"mainEntityOfPage":{{ canonical_url | jsonify }}}</script>
   {% elsif page.url == '/' %}
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"yeno.studio","url":"https://yeno.studio","email":"hello@yeno.studio","description":{{ meta_description | jsonify }},"areaServed":"Worldwide","serviceType":["Product strategy","UX and UI design","Website and application development","Digital marketing","Paid media","SEO and conversion"]}</script>
   {% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body class="page-{{ page.page_class | default: page.layout | default: 'default' }}">
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NF837NTV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   {% include header.html %}
   <main id="main-content">{{ content }}</main>

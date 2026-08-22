@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: id
 title: Panduan Product Development dari Ide hingga Produk Diluncurkan
 slug: panduan-product-development-dari-ide-hingga-peluncuran
 description: Panduan product development untuk mengubah ide menjadi produk digital yang tervalidasi, dirancang, dibangun, diluncurkan, dan terus dikembangkan.
@@ -66,13 +67,13 @@ Pertanyaan yang baik membahas pengalaman nyata. Tanyakan kapan masalah terakhir 
 
 Riset pasar melengkapi pemahaman tersebut. Tim perlu mengetahui solusi alternatif, ekspektasi umum, perubahan perilaku, model harga, dan ruang yang belum dilayani dengan baik. Hasil riset kemudian dirangkum menjadi masalah prioritas dan peluang produk.
 
-## Tahap 3: Rumuskan strategi dan proposisi nilai
+## Tahap 3: Rumuskan strategi dan value proposition
 
 Strategi produk menjelaskan pilihan yang akan diambil dan pilihan yang tidak akan diambil. Produk tidak dapat melayani semua pengguna dan menyelesaikan semua masalah pada saat yang sama.
 
 Tentukan segmen pengguna utama, kebutuhan yang diprioritaskan, manfaat yang dijanjikan, alasan produk berbeda, serta hubungan produk dengan model bisnis. Rumusan ini membantu tim menilai ide fitur secara konsisten.
 
-Proposisi nilai harus dapat dijelaskan dengan bahasa sederhana. Pengguna perlu memahami apa yang dilakukan produk, untuk siapa, dan mengapa produk tersebut relevan. Jika penjelasannya masih membutuhkan banyak istilah internal, strategi kemungkinan belum cukup jelas.
+Value proposition harus dapat dijelaskan dengan bahasa sederhana. Pengguna perlu memahami apa yang dilakukan produk, untuk siapa, dan mengapa produk tersebut relevan. Jika penjelasannya masih membutuhkan banyak istilah internal, strategi kemungkinan belum cukup jelas.
 
 Pada tahap ini, tentukan pula asumsi paling berisiko. Apakah pengguna memiliki masalah tersebut? Apakah mereka mau mengubah kebiasaan? Apakah solusi dapat dijalankan secara operasional? Apakah model bisnisnya masuk akal? Asumsi ini menjadi dasar eksperimen berikutnya.
 
@@ -152,7 +153,7 @@ Susun backlog berdasarkan bukti, bukan hanya permintaan terbaru. Kelompokkan mas
 
 Tim juga perlu mengalokasikan waktu untuk kualitas teknis. Perbaikan performa, keamanan, dokumentasi, infrastruktur, dan kode lama menjaga kecepatan pengembangan dalam jangka panjang.
 
-Lakukan evaluasi berkala terhadap strategi produk. Tanyakan apakah target pengguna masih tepat, masalahnya masih penting, proposisi nilai masih berbeda, dan model bisnis menghasilkan hasil yang diharapkan. Produk yang berkembang dengan baik tidak hanya menambah fitur, tetapi semakin fokus dalam memberikan nilai.
+Lakukan evaluasi berkala terhadap strategi produk. Tanyakan apakah target pengguna masih tepat, masalahnya masih penting, value proposition masih berbeda, dan model bisnis menghasilkan hasil yang diharapkan. Produk yang berkembang dengan baik tidak hanya menambah fitur, tetapi semakin fokus dalam memberikan nilai.
 
 ## Tim yang dibutuhkan dalam product development
 
